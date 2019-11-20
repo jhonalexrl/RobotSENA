@@ -10,7 +10,11 @@ long tiempo;//
 #define ECHO   A5 //El terminal A5 Esta conectado a ECHO.
 #define TRIGER A4 //El terminal A4 Esta conectado a TRIGER.
 
+double distAct,DistanciaMedia;
 
+float alpha=0.1;
+//intervalo de medicion de tiempo
+unsigned int interval1=interval1*alpha;
 
 void setupSen(){ // El setup es la primera función en ejecutarse dentro de un programa en Arduino.
   Serial.begin(115200);// Establece la velocidad de datos en bits por segundo
@@ -36,13 +40,20 @@ float medir(){ //Medicion en decimales
   //Serial.print("Distancia ");
   //Serial.println(distancia);
   //Serial.println(" cm");
-  return distancia;// Con este comando realiza el retorno de la medicion.
+
+  DistanciaMedia = (alpha*distancia)+((1-alpha)*DistanciaMedia); //Filtro pasabajo EMA 
+
+  return DistanciaMedia;// Con este comando realiza el retorno de la medicion.
   }
 
 
 
 void loopSen(){ //es la que se ejecuta un número infinito de veces.
 
-  Serial.println(medir());//se puede  repetirla funcion de medir 
+  
+
+  //Serial.print(distAct);//se puede  repetirla funcion de medir 
+  //Serial.print(" ");
+  Serial.println(DistanciaMedia);//se puede  repetirla funcion de medir 
   
 }
