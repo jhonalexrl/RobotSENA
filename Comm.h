@@ -25,7 +25,7 @@ const int LedPin = 13;
 
 void SetupComm() {
   // initialize serial:
-  Serial.begin(115200);
+  Serial.begin(BAUD_RATE);
   // reserve 200 bytes for the inputString:
   inputString.reserve(200);
 

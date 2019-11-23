@@ -7,6 +7,7 @@
 
 // Planificador de tareas 
 // -------------------- Librerías ------------------------------------------
+#include "Pines.h"
 #include "Boton.h"
 #include "ControlMot.h"
 #include "Led.h"
