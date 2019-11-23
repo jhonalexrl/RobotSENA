@@ -40,7 +40,6 @@ void setup() {// Se ejecuta cuando el micro se inicia, enciendo, reinicia, para 
   TiemUltEje3 = 0;
   SetupComm();
   TiemUltEje4 = 0;
-  
   setupmotor();
    SetupPID();
   
@@ -66,15 +65,11 @@ void loop() { // se ejecuta una y otra vez indefinidamente.
       }
       if (TiempoActual - TiemUltEje3 >= PeriodoT3) 
        {
-   
       TareaPID(); 
       TiemUltEje3 = TiempoActual;
       }
-
-
       if (TiempoActual - TiemUltEje4 >= PeriodoT4) 
        {
-   
       Comm(); 
       TiemUltEje4 = TiempoActual;
       }
