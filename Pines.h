@@ -20,7 +20,7 @@
 //*************************************************
 #ifdef SHIELD_TB6612
 #include <SparkFun_TB6612.h>
-//#include "ShieldMotor.h"
+#include "ControlMot.h"
 #endif
 //*************************************************
 // Tiempos de tareas

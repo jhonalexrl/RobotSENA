@@ -46,14 +46,9 @@ float medir() { //Medicion en decimales
   return DistanciaMedia;// Con este comando realiza el retorno de la medicion.
 }
 
-
-
-void loopSen() { //es la que se ejecuta un número infinito de veces.
-
-
-
+void loopSen()  //es la que se ejecuta un número infinito de veces.
+{
   //Serial.print(distAct);//se puede  repetirla funcion de medir
   //Serial.print(" ");
   Serial.println(DistanciaMedia);//se puede  repetirla funcion de medir
-
 }

@@ -36,7 +36,8 @@
 
 // these constants are used to allow you to make your motor configuration
 // line up with function names like forward.  Value can be 1 or -1
-const int offsetA = 1;  // variable de desplazamiento A
+  
+const int offsetA = 1; // variable de desplazamiento A
 const int offsetB = 1;  // variable de desplazamiento B
 
 // Initializing motors.  The library will allow you to initialize as many
