@@ -6,7 +6,7 @@
 
 AF_DCMotor motor(1);
 
-void setup() {
+void giro() {
   Serial.begin(115200);           // set up Serial library at 9600 bps
   Serial.println("Motor test!");
 
@@ -16,7 +16,7 @@ void setup() {
   motor.run(RELEASE);
 }
 
-void loop() {
+void giroizquierda() {
   uint8_t i;
   
   Serial.print("tick");

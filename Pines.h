@@ -16,6 +16,7 @@
 /*#ifdef SHIELD_ADAFRUIT
 #include <AFMotor.h>
 #include "ShieldMotor.h"
+
 #endif*/
 //*************************************************
 #ifdef SHIELD_TB6612
