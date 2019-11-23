@@ -1,27 +1,27 @@
+
 /********************************************************
- * Definicion de pines para robot seguidor de linea
- * 
- * configuración de board que se este usando
- * 
- ********************************************************/
+ * TAREA DEFINICION PINES, VELOCIDAD COMUNICACION Y SHIELD
+********************************************************/
+
  #pragma once
 /********************************************************
  * Definiciones para las shield disponibles
  * 
- * ShieldMotor adafruit 0
- * Shield SENA TB6612   1
- * Shield STM32         2
- * Shield ESP32         3
- * 
+ * Shield Adafruit 0
+ * Shield TB 6612
  *******************************************************/
 #define SHIELD_ADAFRUIT
+#define SHIELD_TB6612
 //***********************************
-#ifdef SHIELD_ADAFRUIT
+/*#ifdef SHIELD_ADAFRUIT
 #include <AFMotor.h>
 #include "ShieldMotor.h"
+#endif*/
+//*************************************************
+#ifdef SHIELD_TB6612
+#include <SparkFun_TB6612.h>
+//#include "ShieldMotor.h"
 #endif
-
-
 //*************************************************
 // Tiempos de tareas
 #define Ts1 50      // Periodo de la tarea 1 LED blink

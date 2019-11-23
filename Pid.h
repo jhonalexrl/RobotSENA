@@ -1,6 +1,5 @@
+
 #include <PID_v1.h>
-
-
 //Define Variables we'll be connecting to
 double Setpoint, Input, Output;
 

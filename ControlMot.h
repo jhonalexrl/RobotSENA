@@ -1,5 +1,3 @@
-#include <SparkFun_TB6612.h>
-
 /******************************************************************************
   TestRun.ino
   TB6612FNG H-Bridge Motor Driver Example code
@@ -27,6 +25,7 @@
 // Pins for all inputs, keep in mind the PWM defines must be on PWM pins
 // the default pins listed are the ones used on the Redbot (ROB-12097) with
 // the exception of STBY which the Redbot controls with a physical switch
+
 #define AIN1 9  //definicion pin 9
 #define BIN1 7  //definicion pin 7
 #define AIN2 10 //definicion pin 10
@@ -66,7 +65,8 @@ void adelante(byte vel)  //  adelante (byte vel)
   forward (motor1, motor2, vel);   // delante (motor1, motor2, vel)
 }
 boolean estado;
-void loopcontrol() {
+void loopcontrol()
+{
   if (estado == true)
   {
     adelante(150);
