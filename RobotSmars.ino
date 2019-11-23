@@ -7,12 +7,13 @@
 
 // Planificador de tareas 
 // -------------------- Librerías ------------------------------------------
-
+#include "Boton.h"
 #include "ControlMot.h"
 #include "Led.h"
 #include "SenDis.h"
 #include "Pid.h"
 #include "Comm.h"
+
 
 
 // -- Variables de control de tiempo --------------------- 
@@ -24,10 +25,14 @@ unsigned long int TiempoActual; //Registro en el que se guarda el tiempo en mill
 #define PeriodoT2 20 // Periodo de la tarea 2
 #define PeriodoT3 50 // Periodo de la tarea 3
 #define PeriodoT4 10 // Periodo de la tarea 3
+#define PeriodoT5 10 // Periodo de la tarea 3
 unsigned long int TiemUltEje1; // Tiempo de la última ejecución 1
 unsigned long int TiemUltEje2; // Tiempo de la última ejecución 2
 unsigned long int TiemUltEje3; // Tiempo de la última ejecución 3
 unsigned long int TiemUltEje4; // Tiempo de la última ejecución 3
+unsigned long int TiemUltEje5; // Tiempo de la última ejecución 3
+
+
 // -- Funciones de definición de tareas ------------------
 
 // -- Inicializacion ------------------------------------- 
@@ -42,6 +47,7 @@ void setup() {// Se ejecuta cuando el micro se inicia, enciendo, reinicia, para 
   TiemUltEje4 = 0;
   setupmotor();
    SetupPID();
+   SetupBoton();
   
 }
 
@@ -73,5 +79,9 @@ void loop() { // se ejecuta una y otra vez indefinidamente.
       Comm(); 
       TiemUltEje4 = TiempoActual;
       }
-      
+          if (TiempoActual - TiemUltEje5 >= PeriodoT5) 
+       {
+      LecBoton(); 
+      TiemUltEje5 = TiempoActual;
+      }  
 }

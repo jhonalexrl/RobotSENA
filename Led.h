@@ -1,7 +1,7 @@
 
 const int PLED = 13;
 boolean LEDStatus = LOW;
-boolean State= LOW;
+
 
 
 //---------configuración de la tarea LED
@@ -12,6 +12,11 @@ void SetupLED()
 
 //---------Actualización de la tarea LED1
 void LedIntermitente()
-{ digitalWrite(PLED, LEDStatus);
+{
+  if(State)
+
+  {
+  digitalWrite(PLED, LEDStatus);
   LEDStatus = !LEDStatus;
+}
 }
