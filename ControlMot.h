@@ -44,7 +44,6 @@ const int offsetB = 1;  // variable de desplazamiento B
 // motors as you have memory for.  If you are using functions like forward
 // that take 2 motors as arguements you can either write new functions or
 // call the function more than once.
-
 Motor motor1 = Motor(AIN1, AIN2, PWMA, offsetA, STBY);        // el motor 1 conectado a los pines (AIN1, AIN2, PWMA, offsetA, STBY)
 Motor motor2 = Motor(BIN1, BIN2, PWMB, offsetB, STBY);        // el motor 2 conectado a los pines (BIN1, BIN2, PWMB, offsetB, STBY])
 
@@ -65,6 +64,14 @@ void adelante(byte vel)  //  adelante (byte vel)
   //and optionally a speed.  Either a positive number or a negative
   //number for speed will cause it to go backwards
   forward (motor1, motor2, vel);   // delante (motor1, motor2, vel)
+}
+void izquierda(byte vel)
+{
+  left(motor1, motor2, vel);
+}
+void derecha(byte vel)
+{
+  right(motor1, motor2, vel);
 }
 boolean estado;
 void loopcontrol()
