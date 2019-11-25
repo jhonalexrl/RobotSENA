@@ -47,9 +47,4 @@ void TareaPID()
     }
   }
 
-  else
-  {
-    atras(0);
-  }
-
 }
