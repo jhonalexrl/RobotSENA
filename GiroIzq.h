@@ -11,36 +11,38 @@ void giro() {
 
   // turn on motor
   motor.setSpeed(200);
- 
   motor.run(RELEASE);
 }
 
-void giroizquierda() {
+void giroizquierda()
+{
   uint8_t i;
-  
+
   Serial.print("tick");
-  
+
   motor.run(FORWARD);
-  for (i=0; i<255; i++) {
-    motor.setSpeed(i);  
- }
- 
-  for (i=255; i!=0; i--) {
-    motor.setSpeed(i);  
- }
-  
+  for (i = 0; i < 255; i++)
+  {
+    motor.setSpeed(i);
+  }
+
+  for (i = 255; i != 0; i--)
+  {
+    motor.setSpeed(i);
+  }
+
   Serial.print("tock");
 
   motor.run(BACKWARD);
-  for (i=0; i<255; i++) {
-    motor.setSpeed(i);  
- }
- 
-  for (i=255; i!=0; i--) {
-    motor.setSpeed(i);  
- }
-  
+  for (i = 0; i < 255; i++)
+  {
+    motor.setSpeed(i);
+  }
 
+  for (i = 255; i != 0; i--)
+  {
+    motor.setSpeed(i);
+  }
   Serial.print("tech");
   motor.run(RELEASE);
 }

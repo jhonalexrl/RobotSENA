@@ -3,17 +3,19 @@ const int PLED = 13;
 boolean LEDStatus = LOW;
 
 //---------configuración de la tarea LED
+
 void SetupLED()
-{ LEDStatus = LOW;
+{
+  LEDStatus = LOW;
   pinMode(PLED, OUTPUT);
 }
 
 //---------Actualización de la tarea LED1
 void LedIntermitente()
 {
-  if(State)
+  if (State)
   {
-  digitalWrite(PLED, LEDStatus);
-  LEDStatus = !LEDStatus;
-}
+    digitalWrite(PLED, LEDStatus);
+    LEDStatus = !LEDStatus;
+  }
 }

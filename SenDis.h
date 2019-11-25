@@ -22,8 +22,8 @@ void setupSen() { // El setup es la primera función en ejecutarse dentro de un 
   pinMode(ECHO, INPUT); /*activación del pin A4 como entrada: tiempo del rebote del ultrasonido*/
 }
 
-float medir() { //Medicion en decimales
-
+float medir() //Medicion en decimales
+{
   digitalWrite(TRIGER, LOW); // Por cuestión de estabilización del sensor en bajo
   delayMicroseconds(5); // Pausa el programa durante el tiempo para recibir la señar de ultrasonido.
   digitalWrite(TRIGER, HIGH); // envío del pulso ultrasónico*/
@@ -33,7 +33,6 @@ float medir() { //Medicion en decimales
     del pulso ultrasónico y cuando el sensor recibe el rebote, es decir: desde que el pin ECHO empieza a recibir el rebote, HIGH, hasta que
     deja de hacerlo, LOW, la longitud del pulso entrante
   */
-
 
   float distancia = float(0.01716 * tiempo); /*fórmula para calcular la distancia obteniendo un valor flotante* para que una mejor precicion./
   /*Monitorización en centímetros por el monitor serial*/
