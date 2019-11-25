@@ -1,44 +1,44 @@
 #include <AFMotor.h>
 
-AF_DCMotor motorI(3);
-AF_DCMotor motorD(1);
+AF_DCMotor motorI(3);   //motor de la izquierda (3)
+AF_DCMotor motorD(1);   //motor de la derecha (1)
 
 
 void setupmotor() {
-  motorI.setSpeed(0);
-  motorI.run(RELEASE);
-  motorD.setSpeed(0);
-  motorD.run(RELEASE);
+  motorI.setSpeed(0);    //velocidad del motor
+  motorI.run(RELEASE);   //el motor de la izquierda
+  motorD.setSpeed(0);    //velocidad del motor de la derecha
+  motorD.run(RELEASE);   //el motor de la derecha
 }
 
-void atras(byte vel) {
+void atras(byte vel) {    //atras (byte vel)
 
-  motorI.setSpeed(vel);
-  motorI.run(BACKWARD);
-  motorD.setSpeed(vel);
-  motorD.run(BACKWARD);
+  motorI.setSpeed(vel);   //velocidad del motor de la izquierda hacia atras
+  motorI.run(BACKWARD);   //el motor de la izquierda se dirige hacia atras
+  motorD.setSpeed(vel);   //velocidad del motor de la derecha hacia atras
+  motorD.run(BACKWARD);   //el motor de la derecha se dirige hacia atras
 }
 
-void adelante(byte vel)  //  adelante (byte vel)
+void adelante(byte vel)   //adelante (byte vel)
 {
-  motorI.setSpeed(vel);  
-  motorI.run(FORWARD);
-  motorD.setSpeed(vel);  
-  motorD.run(FORWARD);
+  motorI.setSpeed(vel);   //velocidad del motor de la izquierda hacia adelante
+  motorI.run(FORWARD);    //el motor de la izquierda se dirige hacia adelante
+  motorD.setSpeed(vel);   //velocidad del motor de la derecha hacia adelante
+  motorD.run(FORWARD);    //el motor de la derecha se dirige hacia adelante
 }
 
-void izquierda(byte vel) {
+void izquierda(byte vel) { //izquierda (byte vel)
 
-  motorI.setSpeed(vel);
-  motorI.run(BACKWARD);
-  motorD.setSpeed(vel);
-  motorD.run(FORWARD);
+  motorI.setSpeed(vel);   //velocidad del motor de la izquierda
+  motorI.run(BACKWARD);   //motor de la izquierda hacia atras
+  motorD.setSpeed(vel);   //velocidad del motor de la derecha
+  motorD.run(FORWARD);    //motor de la derecha hacia adelante
 }
 
-void derecha(byte vel)  //  adelante (byte vel)
+void derecha(byte vel)    //derecha (byte vel)
 {
-  motorI.setSpeed(vel);  
-  motorI.run(FORWARD);
-  motorD.setSpeed(vel);  
-  motorD.run(BACKWARD);
+  motorI.setSpeed(vel);   //velocidad del motor de la izquierda
+  motorI.run(FORWARD);    //motor de la izquierda hacia atras adelante
+  motorD.setSpeed(vel);   //velocidad del motor de la derecha
+  motorD.run(BACKWARD);   //motor de la derecha hacia atras
 }
