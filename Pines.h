@@ -11,13 +11,12 @@
  * Shield TB 6612
  *******************************************************/
 #define SHIELD_ADAFRUIT
-#define SHIELD_TB6612
+//#define SHIELD_TB6612
 //***********************************
-/*#ifdef SHIELD_ADAFRUIT
-#include <AFMotor.h>
-#include "ShieldMotor.h"
-
-#endif*/
+#ifdef SHIELD_ADAFRUIT
+//#include <AFMotor.h>
+#include "ControlMotAD.h"
+#endif
 //*************************************************
 #ifdef SHIELD_TB6612
 #include <SparkFun_TB6612.h>
