@@ -65,6 +65,14 @@ void adelante(byte vel)  //  adelante (byte vel)
   //number for speed will cause it to go backwards
   forward (motor1, motor2, vel);   // delante (motor1, motor2, vel)
 }
+void izquierda(byte vel)
+{
+  left(motor2, motor2, vel);
+}
+void derecha(byte vel)
+{
+  right(motor1, motor1, vel);
+}
 boolean estado;
 void loopcontrol()
 {
