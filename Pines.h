@@ -2,7 +2,6 @@
 /********************************************************
  * TAREA DEFINICION PINES, VELOCIDAD COMUNICACION Y SHIELD
 ********************************************************/
-
  #pragma once
 /********************************************************
  * Definiciones para las shield disponibles
