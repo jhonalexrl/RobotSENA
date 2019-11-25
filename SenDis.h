@@ -7,8 +7,7 @@
 
 long tiempo;//
 
-#define ECHO   A5 //El terminal A5 Esta conectado a ECHO.
-#define TRIGER A4 //El terminal A4 Esta conectado a TRIGER.
+
 
 double distAct, DistanciaMedia;
 

@@ -75,19 +75,5 @@ void derecha(byte vel)
 }
 void freno(byte vel)
 { 
-  brake(motor1, motor2, vel)
-}
-
-boolean estado;
-void loopcontrol()
-{
-  if (estado == true)
-  {
-    adelante(150);
-  }
-  else
-  {
-    atras(150);
-  }
-  estado = !estado;
+  brake(motor1, motor2);
 }

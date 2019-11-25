@@ -47,9 +47,19 @@ void TareaPID()
     }
   }
 
+
+}
+
+boolean estado;
+void loopcontrol()
+{
+  if (estado == true)
+  {
+    adelante(150);
+  }
   else
   {
-    atras(0);
+    atras(150);
   }
-
+  estado = !estado;
 }

@@ -37,6 +37,7 @@ void Comm() {
   // print the string when a newline arrives:
   if (stringComplete) {
   String temp;
+  byte tempor;
     if (inputString.startsWith("on"))
     {
       digitalWrite(LedPin, HIGH);     // enciende el led conectado en LedPin
@@ -57,7 +58,14 @@ void Comm() {
       Setpoint =  temp.toInt();
       Serial.println(Setpoint);
     }
-
+    if (inputString.startsWith("ade="))
+    {
+      temp = inputString.substring(4);
+      tempor =  temp.toInt();
+      Serial.println(tempor);
+      adelante(tempor);
+      
+    }
     
     // clear the string:
     //Serial.println(inputString);
