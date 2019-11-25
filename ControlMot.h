@@ -73,6 +73,11 @@ void derecha(byte vel)
 {
   right(motor1, motor2, vel);
 }
+void freno(byte vel)
+{ 
+  brake(motor1, motor2, vel)
+}
+
 boolean estado;
 void loopcontrol()
 {
