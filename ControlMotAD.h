@@ -63,10 +63,10 @@ void derecha(byte vel)    //derecha (byte vel)
   motorD.setSpeed(vel);   //velocidad del motor de la derecha
   motorD.run(BACKWARD);   //motor de la derecha hacia atras
 }
-void Freno(byte vel)     //freno (byte vel)
+void freno()     //freno (byte vel)
 {
   motorI.setSpeed(0);    //velocidad del motor cero
-  motorI.run(FORWARD);   //motor de la izquierda frena
+  motorI.run(RELEASE);   //motor de la izquierda frena
   motorD.setSpeed(0);    //velocidad del motor es cero
-  motorD.run(BACKWARD);  //motor de la derecha frena
+  motorD.run(RELEASE);  //motor de la derecha frena
 }

@@ -24,7 +24,7 @@ unsigned long int TiempoActual; //Registro en el que se guarda el tiempo en mill
 // Tarea 1: Control de servo A
 
 #define PeriodoT1 50 // Periodo de la tarea 1
-#define PeriodoT2 20 // Periodo de la tarea 2
+#define PeriodoT2 5000 // Periodo de la tarea 2
 #define PeriodoT3 50 // Periodo de la tarea 3
 #define PeriodoT4 10 // Periodo de la tarea 3
 #define PeriodoT5 10 // Periodo de la tarea 3
@@ -67,7 +67,7 @@ void loop() { // se ejecuta una y otra vez indefinidamente.
   }
   if (TiempoActual - TiemUltEje2 >= PeriodoT2)
   {
-    //loopSen();
+    //loopcontrol();
     TiemUltEje2 = TiempoActual;
   }
   if (TiempoActual - TiemUltEje3 >= PeriodoT3)

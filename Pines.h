@@ -9,8 +9,8 @@
  * Shield Adafruit 0
  * Shield TB 6612
  *******************************************************/
-#define SHIELD_ADAFRUIT
-//#define SHIELD_TB6612
+//#define SHIELD_ADAFRUIT
+#define SHIELD_TB6612
 //***********************************
 #ifdef SHIELD_ADAFRUIT
 //#include <AFMotor.h>
@@ -24,7 +24,7 @@
 //*************************************************
 // Tiempos de tareas
 #define Ts1 50      // Periodo de la tarea 1 LED blink
-#define Ts2 50      // Periodo de la tarea 2 Medicion Sensor
+#define Ts2 5000      // Periodo de la tarea 2 Medicion Sensor
 
 //************************************************
 
@@ -35,5 +35,8 @@
 #define BLED_PCU  13
 
 // configura los pines de conexion de sensor HC-SR04
-#define TRIGGER  A0
-#define ECHO A1
+//#define TRIGGER  A0
+//#define ECHO A1
+
+#define ECHO   A5 //El terminal A5 Esta conectado a ECHO.
+#define TRIGER A4 //El terminal A4 Esta conectado a TRIGER.
