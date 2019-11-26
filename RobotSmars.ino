@@ -67,7 +67,7 @@ void loop() { // se ejecuta una y otra vez indefinidamente.
   }
   if (TiempoActual - TiemUltEje2 >= PeriodoT2)
   {
-    loopcontrol();
+    //loopcontrol();
     TiemUltEje2 = TiempoActual;
   }
   if (TiempoActual - TiemUltEje3 >= PeriodoT3)

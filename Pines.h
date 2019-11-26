@@ -9,8 +9,8 @@
  * Shield Adafruit 0
  * Shield TB 6612
  *******************************************************/
-#define SHIELD_ADAFRUIT
-//#define SHIELD_TB6612
+//#define SHIELD_ADAFRUIT
+#define SHIELD_TB6612
 //***********************************
 #ifdef SHIELD_ADAFRUIT
 //#include <AFMotor.h>

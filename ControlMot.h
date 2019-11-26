@@ -73,7 +73,7 @@ void derecha(byte vel)
 {
   right(motor1, motor2, vel);
 }
-void freno(byte vel)
+void freno()
 { 
   brake(motor1, motor2);
 }
