@@ -32,7 +32,7 @@ void TareaPID()
 
     if (Output == 0)
     {
-      atras(0);
+      freno();
     }
     else
     {

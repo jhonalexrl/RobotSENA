@@ -6,9 +6,6 @@
 //trabajo debe ser de NO APROBADO además de las respectivas sanciones a que haya lugar
 
 long tiempo;//
-
-
-
 double distAct, DistanciaMedia;
 
 float alpha = 0.1;
