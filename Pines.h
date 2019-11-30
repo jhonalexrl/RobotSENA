@@ -17,22 +17,27 @@
 #ifdef SHIELD_ADAFRUIT
 //#include <AFMotor.h>
 #include "ControlMotAD.h"
+#define BUTTONPIN 2     // the number of the pushbutton pin
 #endif
 //*************************************************
 #ifdef SHIELD_TB6612
 #include <SparkFun_TB6612.h>
 #include "ControlMot.h"
+#define BUTTONPIN 12     // the number of the pushbutton pin
 #endif
 //*************************************************
 #ifdef SHIELD_FUNDUMOTO
 #include "FunduMot.h"
+#define BUTTONPIN 3     // the number of the pushbutton pin
 #endif
 //*************************************************
 
 // Tiempos de tareas
-#define Ts1 50      // Periodo de la tarea 1 LED blink
-#define Ts2 5000      // Periodo de la tarea 2 Medicion Sensor
-
+#define PeriodoT1 50      // Periodo de la tarea 1 LED blink
+#define PeriodoT2 5000      // Periodo de la tarea 2 loop control
+#define PeriodoT3 50 // Periodo de la tarea PID
+#define PeriodoT4 10 // Periodo de la tarea Comm
+#define PeriodoT5 10 // Periodo de la tarea Lectura del boton
 //************************************************
 
 // tarea de comunicacion configura la velocidad (9600,...)
@@ -41,7 +46,9 @@
 // configura el pin de blink led
 #define PLED 2
 
+// Configura el pin de entrada del boton
 #define BUTTONPIN 3     // the number of the pushbutton pin
 
+// Configurar el pin en el que se conecta el sensor
 #define ECHO   A5 //El terminal A5 Esta conectado a ECHO.
 #define TRIGER A4 //El terminal A4 Esta conectado a TRIGER.
