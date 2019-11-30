@@ -1,7 +1,5 @@
 
-const int PLED = 13;
 boolean LEDStatus = LOW;
-
 //---------configuración de la tarea LED
 
 void SetupLED()

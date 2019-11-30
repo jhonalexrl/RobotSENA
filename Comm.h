@@ -20,8 +20,6 @@
 
 String inputString = "";         // a String to hold incoming data
 bool stringComplete = false;  // whether the string is complete
-const int LedPin = 13;
-
 
 void SetupComm() {
   // initialize serial:
@@ -29,7 +27,7 @@ void SetupComm() {
   // reserve 200 bytes for the inputString:
   inputString.reserve(200);
 
-  pinMode(LedPin, OUTPUT);      //Configura pin 13 como salida
+  pinMode(PLED, OUTPUT);      //Configura pin 13 como salida
 
 }
 
@@ -40,12 +38,12 @@ void Comm() {
   byte tempor;
     if (inputString.startsWith("on"))
     {
-      digitalWrite(LedPin, HIGH);     // enciende el led conectado en LedPin
+      digitalWrite(PLED, HIGH);     // enciende el led conectado en LedPin
       State = HIGH;
     }
     if (inputString.startsWith("off"))
     {
-      digitalWrite(LedPin, LOW);     // enciende el led conectado en LedPin
+      digitalWrite(PLED, LOW);     // enciende el led conectado en LedPin
       State = LOW;
     }
     if (inputString.startsWith("dis"))
