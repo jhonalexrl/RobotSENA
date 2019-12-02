@@ -42,7 +42,7 @@
 #define TRIGER 8 //El terminal A4 Esta conectado a TRIGER.
 #endif
 //*************************************************
-#ifdef SHIELD_BABY_ORANGUTAN
+#ifdef SHIELD_BABY_ORANGUTAN//shield con usbasp
 #include <OrangutanMotors.h>
 #include "baby_orangutan.h"
 #define BUTTONPIN 3    // Configura el pin de entrada del boton
