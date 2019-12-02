@@ -34,7 +34,7 @@ void atras(byte vel)
 
 }
 
-void freno(byte vel)
+ void freno()
   {
   motors.setSpeeds(0,0);
 
