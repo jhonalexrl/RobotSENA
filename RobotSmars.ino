@@ -12,22 +12,30 @@
 #include "Led.h"
 #include "SenDis.h"
 #include "Pid.h"
+#include "control.h"
 #include "Comm.h"
 
 // -- Variables de control de tiempo ---------------------
 
 unsigned long int TiempoActual; //Registro en el que se guarda el tiempo en millis actual
 // Tiempo total (microsegundos)
-
 // -- Variables de temporización de tareas ---------------
 
 // Tarea 1: Control de servo A
+//
+//#define PeriodoT1 50 // Periodo de la tarea 1
+//#define PeriodoT2 5000 // Periodo de la tarea 2
+//#define PeriodoT3 50 // Periodo de la tarea 3
+//#define PeriodoT4 10 // Periodo de la tarea 3
+//#define PeriodoT5 10 // Periodo de la tarea 3
+//#define PeriodoT6 10 // Periodo de la tarea 3
 
 unsigned long int TiemUltEje1; // Tiempo de la última ejecución 1
 unsigned long int TiemUltEje2; // Tiempo de la última ejecución 2
 unsigned long int TiemUltEje3; // Tiempo de la última ejecución 3
 unsigned long int TiemUltEje4; // Tiempo de la última ejecución 3
 unsigned long int TiemUltEje5; // Tiempo de la última ejecución 3
+unsigned long int TiemUltEje6; // Tiempo de la última ejecución 3
 
 // -- Funciones de definición de tareas ------------------
 
@@ -46,6 +54,8 @@ void setup()  // Se ejecuta cuando el micro se inicia, enciendo, reinicia, para 
   setupmotor();
   SetupPID();
   SetupBoton();
+  voidsetupcontrol();
+  TiemUltEje6 = 0;
 }
 
 // -- Bucle principal ------------------------------------
@@ -78,5 +88,10 @@ void loop() { // se ejecuta una y otra vez indefinidamente.
   {
     LecBoton();
     TiemUltEje5 = TiempoActual;
+  }
+  if (TiempoActual - TiemUltEje6 >= PeriodoT6)
+  {
+  voidloopcontrol();
+    TiemUltEje6 = TiempoActual;
   }
 }
