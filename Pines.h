@@ -10,9 +10,9 @@
  * Shield TB 6612
  *******************************************************/
 //#define SHIELD_ADAFRUIT
-#define SHIELD_TB6612
+//#define SHIELD_TB6612
 //#define SHIELD_FUNDUMOTO
-
+#define BABY ORANGUTAN
 //***********************************
 #ifdef SHIELD_ADAFRUIT
 #include <AFMotor.h>
@@ -40,6 +40,12 @@
 #define TRIGER 8 //El terminal A4 Esta conectado a TRIGER.
 #endif
 //*************************************************
+#ifdef BABY ORANGUTAN
+#include "baby_orangutan.h"
+#define ECHO PD0 //El terminal PD0 Esta conectado a ECHO.
+#define TRIGER PD1 //El terminal PD1 Esta conectado a TRIGER.
+#define BUTTONPIN 13 //el terminal RESET esta conectado al pin 13
+#endif
 
 // Tiempos de tareas
 #define PeriodoT1 50      // Periodo de la tarea 1 LED blink
