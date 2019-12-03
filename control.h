@@ -98,7 +98,7 @@ voidloopcontrol()
 
    if (velo == 0)
     {
-      freno();
+      //freno();
     }
     else
     {
