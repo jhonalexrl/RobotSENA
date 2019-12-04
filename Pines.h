@@ -12,10 +12,13 @@
 //#define SHIELD_ADAFRUIT
 //#define SHIELD_TB6612
 //#define SHIELD_FUNDUMOTO
+
 #define SHIELD_ESP32
+=======
+//#define BABY ORANGUTAN
 //***********************************
 #ifdef SHIELD_ADAFRUIT
-//#include <AFMotor.h>
+#include <AFMotor.h>
 #include "ControlMotAD.h"
 #define BUTTONPIN A3     // Configura el pin de entrada del boton
 // Configurar el pin en el que se conecta el sensor
@@ -47,13 +50,20 @@
 #define ECHO   23 //El terminal A5 Esta conectado a ECHO.
 #define TRIGER 22 //El terminal A4 Esta conectado a TRIGER.
 #endif
-//***********************************
+//=======
+#ifdef BABY ORANGUTAN
+#include "baby_orangutan.h"
+#define ECHO PD0 //El terminal PD0 Esta conectado a ECHO.
+#define TRIGER PD1 //El terminal PD1 Esta conectado a TRIGER.
+#define BUTTONPIN 13 //el terminal RESET esta conectado al pin 13
+#endif
 // Tiempos de tareas
 #define PeriodoT1 50      // Periodo de la tarea 1 LED blink
 #define PeriodoT2 5000      // Periodo de la tarea 2 loop control
 #define PeriodoT3 50 // Periodo de la tarea PID
 #define PeriodoT4 10 // Periodo de la tarea Comm
 #define PeriodoT5 10 // Periodo de la tarea Lectura del boton
+#define PeriodoT6 10 // Periodo de la tarea Lectura del boton
 //************************************************
 
 // tarea de comunicacion configura la velocidad (9600,...)
