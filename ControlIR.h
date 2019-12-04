@@ -1,23 +1,18 @@
 #include "IRremote.h"
-int receiver = 11;
+
 int velo = 0;
-IRrecv irrecv(receiver);
+IRrecv irrecv(RECEIVER);
 decode_results results;
 
 #define INC 15
 
-voidsetupcontrol()
+void setupIR()
 {
-  Serial.begin(115200);
   irrecv.enableIRIn();
-  pinMode(4, OUTPUT);
-  pinMode(5, OUTPUT);
-  pinMode(6, OUTPUT);
-  pinMode(7, OUTPUT);
 }
 
 
-voidloopcontrol()
+void ControlIR()
 {
   if (irrecv.decode(&results))
 

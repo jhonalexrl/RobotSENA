@@ -7,12 +7,12 @@
 
 // ----------------------PLANEADOR DE TAREAS--------------------------------
 // -------------------- INVOCACION DE LIBRERIAS-----------------------------
-#include "Pines.h"
+#include "Config.h"
 #include "Boton.h"
 #include "Led.h"
 #include "SenDis.h"
 #include "Pid.h"
-#include "control.h"
+#include "ControlIR.h"
 #include "Comm.h"
 
 // -- Variables de control de tiempo ---------------------
@@ -54,7 +54,7 @@ void setup()  // Se ejecuta cuando el micro se inicia, enciendo, reinicia, para 
   setupmotor();
   SetupPID();
   SetupBoton();
-  voidsetupcontrol();
+  setupIR();
   TiemUltEje6 = 0;
 }
 
@@ -91,7 +91,7 @@ void loop() { // se ejecuta una y otra vez indefinidamente.
   }
   if (TiempoActual - TiemUltEje6 >= PeriodoT6)
   {
-  voidloopcontrol();
+  loopcontrol();
     TiemUltEje6 = TiempoActual;
   }
 }

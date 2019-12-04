@@ -1,4 +1,3 @@
-
 boolean LEDStatus = LOW;
 //---------configuración de la tarea LED
 
