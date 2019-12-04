@@ -12,17 +12,7 @@
 //#define SHIELD_ADAFRUIT
 //#define SHIELD_TB6612
 //#define SHIELD_FUNDUMOTO
-#define SHIELD_ESP32
-//***********************************
-#ifdef SHIELD_ESP32
 
-#include "control_ESP.h"
-#define BUTTONPIN 21     // Configura el pin de entrada del boton
-// Configurar el pin en el que se conecta el sensor
-#define ECHO   23 //El terminal A5 Esta conectado a ECHO.
-#define TRIGER 22 //El terminal A4 Esta conectado a TRIGER.
-#endif
-//***********************************
 #ifdef SHIELD_ADAFRUIT
 //#include <AFMotor.h>
 #include "ControlMotAD.h"
@@ -49,7 +39,17 @@
 #define TRIGER 8 //El terminal A4 Esta conectado a TRIGER.
 #endif
 //*************************************************
+#define SHIELD_ESP32
+//***********************************
+#ifdef SHIELD_ESP32
 
+#include "control_ESP.h"
+#define BUTTONPIN 21     // Configura el pin de entrada del boton
+// Configurar el pin en el que se conecta el sensor
+#define ECHO   23 //El terminal A5 Esta conectado a ECHO.
+#define TRIGER 22 //El terminal A4 Esta conectado a TRIGER.
+#endif
+//***********************************
 // Tiempos de tareas
 #define PeriodoT1 50      // Periodo de la tarea 1 LED blink
 #define PeriodoT2 5000      // Periodo de la tarea 2 loop control

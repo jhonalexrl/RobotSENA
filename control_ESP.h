@@ -4,7 +4,6 @@
 //para motor 1
 const int freq = 50000;
 const int ledChannel = 0 ;
-
 const int resolution = 8;
 #define PWMA 14
 #define AIN2 19
@@ -29,7 +28,6 @@ void setupmotor() {
   pinMode(BIN2, OUTPUT);
   pinMode(PWMA, OUTPUT);
   pinMode(PWMB, OUTPUT);
-
   ledcSetup(ledChannel, freq, resolution);
   ledcSetup(ledChannel2, freq2, resolution2);
   ledcAttachPin (PWMA, ledChannel);
