@@ -11,11 +11,11 @@
  * Shield SHIELD_ESP32
  * Shield SHIELD_BABYORANGUTAN
  *******************************************************/
-//#define SHIELD_ADAFRUIT
+#define SHIELD_ADAFRUIT
 //#define SHIELD_TB6612
 //#define SHIELD_FUNDUMOTO
 //#define SHIELD_ESP32
-#define SHIELD_BABYORANGUTAN
+//#define SHIELD_BABYORANGUTAN
 //*************************************************
 #ifdef SHIELD_ADAFRUIT
 #include <AFMotor.h>
@@ -24,6 +24,7 @@
 // Configurar el pin en el que se conecta el sensor
 #define ECHO   A5 //El terminal A5 Esta conectado a ECHO.
 #define TRIGER A4 //El terminal A4 Esta conectado a TRIGER.
+#define RECEIVER A2   //Define el pin del receptor de IR 
 #endif
 //*************************************************
 #ifdef SHIELD_TB6612
