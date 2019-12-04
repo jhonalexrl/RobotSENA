@@ -12,7 +12,8 @@
 //#define SHIELD_ADAFRUIT
 //#define SHIELD_TB6612
 //#define SHIELD_FUNDUMOTO
-
+#define SHIELD_ESP32
+//***********************************
 #ifdef SHIELD_ADAFRUIT
 //#include <AFMotor.h>
 #include "ControlMotAD.h"
@@ -39,10 +40,7 @@
 #define TRIGER 8 //El terminal A4 Esta conectado a TRIGER.
 #endif
 //*************************************************
-#define SHIELD_ESP32
-//***********************************
 #ifdef SHIELD_ESP32
-
 #include "control_ESP.h"
 #define BUTTONPIN 21     // Configura el pin de entrada del boton
 // Configurar el pin en el que se conecta el sensor
